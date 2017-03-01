@@ -10,10 +10,11 @@ import {MiServicio} from "../../../app.service";
 export class BuscadorComponent implements OnInit {
 
   private heroeEcontrado:any[] = [];
-  private buscador:any;
+  private buscador:string;
 
   constructor(private _activatedRouter:ActivatedRoute, private _servicio:MiServicio,
               private _router:Router) {
+
     this._activatedRouter.params.subscribe(params =>{
       this.buscador = params['busqueda'];
       this.heroeEcontrado = this._servicio.getBusqueda(params['busqueda']);
