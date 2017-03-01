@@ -76,4 +76,19 @@ export class MiServicio {
       return heroeEncontrado;
     }
 
+    getBusqueda(busqueda:string){
+      let busquedaMinus:string = busqueda.toLowerCase();
+      let resultBusqueda:any[] = [];
+
+      for(let heroe of this.heroes){
+        let nombreMinus = heroe.nombre.toLowerCase();
+        let posicionHeroe = nombreMinus.indexOf(busquedaMinus);
+
+        if(posicionHeroe >= 0){
+          resultBusqueda.push(heroe);
+        }
+      }
+      return resultBusqueda;
+    }
+
 }
