@@ -8,12 +8,14 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import {RoutingModule} from "./app.routes";
 import {MiServicio} from "./app.service";
+import { HeroesComponent } from './components/heroes/heroes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
