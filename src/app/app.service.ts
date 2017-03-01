@@ -57,4 +57,8 @@ export class MiServicio {
 
     constructor() { }
 
+    getHeroes(){
+      return this.heroes;
+    }
+
 }
