@@ -9,13 +9,15 @@ import { HomeComponent } from './components/home/home.component';
 import {RoutingModule} from "./app.routes";
 import {MiServicio} from "./app.service";
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,

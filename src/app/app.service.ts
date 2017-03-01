@@ -61,4 +61,19 @@ export class MiServicio {
       return this.heroes;
     }
 
+    getHeroe(heroeN:string){
+
+      let heroeEncontrado:any[] = [];
+
+      for(let heroe of this.heroes){
+        let nombre:string = heroe.nombre;
+        let posicionHeroe = nombre.indexOf(heroeN);
+
+        if(posicionHeroe >= 0){
+          heroeEncontrado.push(heroe);
+        }
+      }
+      return heroeEncontrado;
+    }
+
 }

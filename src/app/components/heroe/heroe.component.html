@@ -1,0 +1,20 @@
+<div class="container separador">
+
+  <div class="row">
+    <div class="card col-md-4" *ngFor="let heroe of heroe">
+      <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+      <div class="card-block">
+      </div>
+    </div>
+
+    <div class="col-md-8">
+    <div class="datos info-heroe" *ngFor="let info of heroe">
+      <h2 class="text-center">Nombre del Heroe: {{info.nombre}} ({{info.aparicion|date:'y'}})</h2>
+      <hr>
+      <p class="text-center">{{info.bio}}</p>
+      <img [src]="info.casa" [alt]="info.nombre" width="150px">
+      <button (click)="volverAtras()" class="btn btn-outline-danger">Volver</button>
+    </div>
+    </div>
+  </div>
+</div>
